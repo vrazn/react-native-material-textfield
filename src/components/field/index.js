@@ -119,6 +119,7 @@ export default class TextField extends PureComponent {
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+    affixContainerStyle: (ViewPropTypes || View.propTypes).style,
   };
 
   static inputContainerStyle = styles.inputContainer;
@@ -535,6 +536,7 @@ export default class TextField extends PureComponent {
       fontSize,
       baseColor: color,
       affixTextStyle: style,
+      affixContainerStyle: containerStyle,
     } = this.props;
 
     if (null == affix) {
@@ -544,6 +546,7 @@ export default class TextField extends PureComponent {
     let props = {
       type,
       style,
+      containerStyle,
       color,
       fontSize,
       labelAnimation,
